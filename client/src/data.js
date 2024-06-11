@@ -6,7 +6,6 @@ import {
   FaPumpSoap,
   FaShower,
   FaFireExtinguisher,
-  FaUmbrellaBeach,
   FaKey,
 } from "react-icons/fa";
 import {FaHouseUser, FaPeopleRoof, FaKitchenSet } from "react-icons/fa6";
@@ -18,7 +17,7 @@ import {
   BiSolidFridge,
   BiWorld,
 } from "react-icons/bi";
-import { BsSnow, BsFillDoorOpenFill, BsPersonWorkspace } from "react-icons/bs";
+import { BsSnow, BsFillDoorOpenFill } from "react-icons/bs";
 import { MdOutlineVilla, MdMicrowave, MdBalcony, MdYard, MdPets } from "react-icons/md";
 import {
   PiBathtubFill,
@@ -27,11 +26,10 @@ import {
 } from "react-icons/pi";
 import { TbIroning3 } from "react-icons/tb";
 import {
-  GiHeatHaze,
   GiCctvCamera,
   GiBarbecue,
   GiToaster,
-  GiCampfire,
+
 } from "react-icons/gi";
 import { AiFillCar } from "react-icons/ai";
 
@@ -41,25 +39,25 @@ export const categories = [
     icon: <BiWorld />,
   },
   {
-    img: "assets/modern_cat.webp",
+    img: "assets/city.jpg",
     label: "Oras",
     icon: <MdOutlineVilla />,
     description: "This property is modern!",
   },
   {
-    img: "assets/windmill_cat.webp",
+    img: "assets/farm.jpg",
     label: "Ferma",
     icon: <GiWindmill />,
     description: "This property is has a ferm!",
   },
   {
-    img: "assets/beach_cat.jpg",
+    img: "assets/beach.jpg",
     label: "Mare",
     icon: <TbBeach />,
     description: "This property is close to the beach!",
   },
   {
-    img: "assets/countryside_cat.webp",
+    img: "assets/mountains.jpg",
     label: "Munte",
     icon: <TbMountain />,
     description: "This property is in the countryside!",
@@ -89,111 +87,95 @@ export const types = [
 
 export const facilities = [
   {
-    name: "Bath tub",
+    name: "Cada",
     icon: <PiBathtubFill />,
   },
   {
-    name: "Personal care products",
+    name: "Ingrijire personala",
     icon: <FaPumpSoap />,
   },
   {
-    name: "Outdoor shower",
+    name: "Dus",
     icon: <FaShower />,
   },
   {
-    name: "Washer",
+    name: "Masina de spalat",
     icon: <BiSolidWasher />,
   },
   {
-    name: "Dryer",
+    name: "Uscator",
     icon: <BiSolidDryer />,
   },
   {
-    name: "Hangers",
+    name: "Umerase",
     icon: <PiCoatHangerFill />,
   },
   {
-    name: "Iron",
+    name: "Fier de calcat",
     icon: <TbIroning3 />,
   },
   {
-    name: "TV",
+    name: "Televizor",
     icon: <PiTelevisionFill />,
   },
   {
-    name: "Dedicated workspace",
-    icon: <BsPersonWorkspace />
-  },
-  {
-    name: "Air Conditioning",
+    name: "Aer conditionat",
     icon: <BsSnow />,
   },
   {
-    name: "Heating",
-    icon: <GiHeatHaze />,
-  },
-  {
-    name: "Security cameras",
+    name: "Camere de securitate",
     icon: <GiCctvCamera />,
   },
   {
-    name: "Fire extinguisher",
+    name: "Extinctor",
     icon: <FaFireExtinguisher />,
   },
   {
-    name: "First Aid",
+    name: "Trusa de prim ajutor",
     icon: <BiSolidFirstAid />,
   },
   {
-    name: "Wifi",
+    name: "Internet",
     icon: <BiWifi />,
   },
   {
-    name: "Cooking set",
+    name: "Set de gatit",
     icon: <FaKitchenSet />,
   },
   {
-    name: "Refrigerator",
+    name: "Frigider",
     icon: <BiSolidFridge />,
   },
   {
-    name: "Microwave",
+    name: "Cuptor cu microunde",
     icon: <MdMicrowave />,
   },
   {
-    name: "Stove",
+    name: "Cuptor",
     icon: <GiToaster />,
   },
   {
-    name: "Barbecue grill",
+    name: "Gratar",
     icon: <GiBarbecue />,
   },
   {
-    name: "Outdoor dining area",
-    icon: <FaUmbrellaBeach />,
-  },
-  {
-    name: "Private patio or Balcony",
+    name: "Balcon",
     icon: <MdBalcony />,
   },
   {
-    name: "Camp fire",
-    icon: <GiCampfire />,
-  },
-  {
-    name: "Garden",
+    name: "Gradina",
     icon: <MdYard />,
   },
   {
-    name: "Free parking",
+    name: "Parcare",
     icon: <AiFillCar />,
   },
   {
-    name: "Self check-in",
+    name: "Auto check-in",
     icon: <FaKey />
   },
   {
-    name: " Pet allowed",
+    name: "Acces cu animale permis",
     icon: <MdPets />
   }
 ];

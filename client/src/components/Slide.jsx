@@ -3,7 +3,7 @@ import React from 'react'
 export const Slide = () => {
   return (
     <div className='slide'>
-        <h1>Dream Nest</h1>
+        <h5></h5>
     </div>
   )
 }

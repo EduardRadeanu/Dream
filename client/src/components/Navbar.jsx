@@ -28,7 +28,7 @@ const Navbar = () => {
       <div className="navbar_search">
         <input
           type="text"
-          placeholder="Cauta"
+          placeholder="Vanzare/Inchirere/Locatie"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
@@ -72,17 +72,15 @@ const Navbar = () => {
 
         {dropdownMenu && !user && (
           <div className="navbar_right_accountmenu">
-            <Link to="/login">Log In</Link>
-            <Link to="/register">Sign Up</Link>
+            <Link to="/login">Conecteaza-te</Link>
+            <Link to="/register">Inregistreza-te</Link>
           </div>
         )}
 
         {dropdownMenu && user && (
           <div className="navbar_right_accountmenu">
-            <Link to={`/${user._id}/trips`}>Trip List</Link>
             <Link to={`/${user._id}/wishList`}>Locuinte favorite</Link>
             <Link to={`/${user._id}/properties`}>Lista ta de locuinte</Link>
-            <Link to={`/${user._id}/reservations`}>Reservation List</Link>
             <Link to="/create-listing">Publica o locuinta</Link>
 
             <Link

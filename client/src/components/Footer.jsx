@@ -12,11 +12,11 @@ const Footer = () => {
         <h3>Asistenta</h3>
         <div className="footer_right_info">
           <LocalPhone />
-          <p>+1 234 567 890</p>
+          <p>0741173244</p>
         </div>
         <div className="footer_right_info">
           <Email />
-          <p>dreamnest@support.com</p>
+          <p>eduard@support.com</p>
         </div>
       </div>
     </div>
