@@ -52,8 +52,11 @@ const ListingDetails = () => {
       <div className="listing-details">
         <div className="title">
           <h1>{listing.title}</h1>
-          <div></div>
+          
+          
         </div>
+        <div></div>
+          <h2>{listing.price} €</h2>
 
         <div className="photos">
           {listing.listingPhotoPaths?.map((item) => (

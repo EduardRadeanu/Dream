@@ -17,6 +17,7 @@ const ListingCard = ({
   province,
   country,
   category,
+  price,
   onDelete,
 }) => {
   /* SLIDER FOR IMAGES */
@@ -103,6 +104,7 @@ const ListingCard = ({
         {city}, {province}, {country}
       </h3>
       <p>{category}</p>
+      <span>{price} €</span>
 
    
       {onDelete && (
