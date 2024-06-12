@@ -9,7 +9,7 @@ const Footer = () => {
 
 
       <div className="footer_right">
-        <h3>Asistenta</h3>
+        <h3>Asistență</h3>
         <div className="footer_right_info">
           <LocalPhone />
           <p>0741173244</p>

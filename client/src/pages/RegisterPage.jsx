@@ -79,7 +79,7 @@ const RegisterPage = () => {
             required
           />
           <input
-            placeholder="Parola"
+            placeholder="Parolă"
             name="password"
             value={formData.password}
             onChange={handleChange}
@@ -87,7 +87,7 @@ const RegisterPage = () => {
             required
           />
           <input
-            placeholder="Confirma parola"
+            placeholder="Confirmă parolă"
             name="confirmPassword"
             value={formData.confirmPassword}
             onChange={handleChange}
@@ -110,7 +110,7 @@ const RegisterPage = () => {
           />
           <label htmlFor="image">
             <img src="/assets/addImage.png" alt="add profile photo" />
-            <p>Poza de profil</p>
+            <p>Poză de profil</p>
           </label>
 
           {formData.profileImage && (
@@ -120,9 +120,9 @@ const RegisterPage = () => {
               style={{ maxWidth: "80px" }}
             />
           )}
-          <button type="submit" disabled={!passwordMatch}>Inregistreza-te</button>
+          <button type="submit" disabled={!passwordMatch}>Înregistreza-te</button>
         </form>
-        <a href="/login">Ai deja un cont?Conecteaza-te aici!</a>
+        <a href="/login">Ai deja un cont?Conectează-te aici!</a>
       </div>
     </div>
   );

@@ -142,12 +142,12 @@ const CreateListing = () => {
       <Navbar />
 
       <div className="create-listing">
-        <h1>Publica locuinta ta</h1>
+        <h1>Publică locuința ta</h1>
         <form onSubmit={handlePost}>
           <div className="create-listing_step1">
-            <h2>Spune-ne despre locatie </h2>
+            <h2>Pasul 1: Spune-ne despre locație </h2>
             <hr />
-            <h3>In care categorie se regaseste locuinta ta?</h3>
+            <h3>În care categorie se regasește locuința ta?</h3>
             <div className="category-list">
               {categories?.map((item, index) => (
                 <div
@@ -163,7 +163,7 @@ const CreateListing = () => {
               ))}
             </div>
 
-            <h3>Ce tip de locuinta vor avea oaspetii tai?</h3>
+            <h3>Ce tip de locuință vor avea oaspeții tăi?</h3>
             <div className="type-list">
               {types?.map((item, index) => (
                 <div
@@ -180,7 +180,7 @@ const CreateListing = () => {
               ))}
             </div>
 
-            <h3>Unde este situata locuinta ta?</h3>
+            <h3>Unde este situată locuința ta?</h3>
             <div className="full">
               <div className="location">
                 <p>Strada</p>
@@ -197,7 +197,7 @@ const CreateListing = () => {
 
             <div className="half">
               <div className="location">
-                <p>Apartament, Scara, etc. (daca este necesar)</p>
+                <p>Apartament, Scară, etc. (dacă este necesar)</p>
                 <input
                   type="text"
                   placeholder="Apartament, Scara, etc. (daca este necesar)"
@@ -208,7 +208,7 @@ const CreateListing = () => {
                 />
               </div>
               <div className="location">
-                <p>Oras</p>
+                <p>Oraș</p>
                 <input
                   type="text"
                   placeholder="Oras"
@@ -222,7 +222,7 @@ const CreateListing = () => {
 
             <div className="half">
               <div className="location">
-                <p>Tara</p>
+                <p>Țară</p>
                 <input
                   type="text"
                   placeholder="Tara"
@@ -237,7 +237,7 @@ const CreateListing = () => {
             <h3>Despre camere</h3>
             <div className="basics">
               <div className="basic">
-                <p>Camera de zi(living)</p>
+                <p>Cameră de zi(living)</p>
                 <div className="basic_count">
                   <RemoveCircleOutline
                     onClick={() => {
@@ -347,7 +347,7 @@ const CreateListing = () => {
           </div>
 
           <div className="create-listing_step2">
-            <h2>Step 2: Make your place stand out</h2>
+            <h2>Pasul 2: Ce oferă locația</h2>
             <hr />
 
             <h3>Spune-ne de ce dispui</h3>
@@ -366,7 +366,7 @@ const CreateListing = () => {
               ))}
             </div>
 
-            <h3>Adauga fotografii</h3>
+            <h3>Adaugă fotografii</h3>
             <DragDropContext onDragEnd={handleDragPhoto}>
               <Droppable droppableId="photos" direction="horizontal">
                 {(provided) => (
@@ -389,7 +389,7 @@ const CreateListing = () => {
                           <div className="icon">
                             <IoIosImages />
                           </div>
-                          <p>Adauga imagini</p>
+                          <p>Adaugă imagini</p>
                         </label>
                       </>
                     )}
@@ -437,7 +437,7 @@ const CreateListing = () => {
                           <div className="icon">
                             <IoIosImages />
                           </div>
-                          <p>Adauga imagini</p>
+                          <p>Adaugă imagini</p>
                         </label>
                       </>
                     )}
@@ -446,7 +446,7 @@ const CreateListing = () => {
               </Droppable>
             </DragDropContext>
 
-            <h3>Ce face locuinta ta atractiva?</h3>
+            <h3>Descrie locuința</h3>
             <div className="description">
               <p>Titlu</p>
               <input
@@ -466,7 +466,7 @@ const CreateListing = () => {
                 onChange={handleChangeDescription}
                 required
               />
-              <p>Numar de telefon:</p>
+              <p>Număr de telefon:</p>
               <input
                 type="number"
                 placeholder="Telefon"
@@ -477,7 +477,7 @@ const CreateListing = () => {
               />
 
 
-   <p>Pret:</p>
+   <p>Preț:</p>
               <span>€</span>
               <input
                 type="number"
@@ -492,7 +492,7 @@ const CreateListing = () => {
           </div>
 
           <button className="submit_btn" type="submit">
-            Adauga locuinta
+          Adaugă locuința
           </button>
         </form>
       </div>

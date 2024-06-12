@@ -58,14 +58,14 @@ const LoginPage = () => {
           />
           <input
             type="password"
-            placeholder="Parola"
+            placeholder="Parolă"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
           />
-          <button type="submit">Conecteaza-te</button>
+          <button type="submit">Conectează-te</button>
         </form>
-        <a href="/register">Nu ai un cont?Inregistreaza-te acum!</a>
+        <a href="/register">Nu ai un cont?Înregistrează-te acum!</a>
       </div>
     </div>
   );

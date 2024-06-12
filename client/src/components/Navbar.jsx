@@ -28,7 +28,7 @@ const Navbar = () => {
       <div className="navbar_search">
         <input
           type="text"
-          placeholder="Vanzare/Inchirere/Locatie"
+          placeholder="Vânzare/Închiriere/Locație"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
@@ -43,11 +43,11 @@ const Navbar = () => {
       <div className="navbar_right">
         {user ? (
           <a href="/create-listing" className="host">
-            Publica o locuinta
+            Publică o locuință
           </a>
         ) : (
           <a href="/login" className="host">
-            Publica o locuinta
+            Publică o locuință
           </a>
         )}
 
@@ -72,16 +72,16 @@ const Navbar = () => {
 
         {dropdownMenu && !user && (
           <div className="navbar_right_accountmenu">
-            <Link to="/login">Conecteaza-te</Link>
-            <Link to="/register">Inregistreza-te</Link>
+            <Link to="/login">Conectează-te</Link>
+            <Link to="/register">Înregistreză-te</Link>
           </div>
         )}
 
         {dropdownMenu && user && (
           <div className="navbar_right_accountmenu">
-            <Link to={`/${user._id}/wishList`}>Locuinte favorite</Link>
-            <Link to={`/${user._id}/properties`}>Lista ta de locuinte</Link>
-            <Link to="/create-listing">Publica o locuinta</Link>
+            <Link to={`/${user._id}/wishList`}>Locuințe favorite</Link>
+            <Link to={`/${user._id}/properties`}>Lista ta de locuințe</Link>
+            <Link to="/create-listing">Publică o locuință</Link>
 
             <Link
               to="/login"
@@ -89,7 +89,7 @@ const Navbar = () => {
                 dispatch(setLogout());
               }}
             >
-              Deconectati-va
+              Deconectați-vă
             </Link>
           </div>
         )}

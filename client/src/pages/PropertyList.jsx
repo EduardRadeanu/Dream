@@ -47,7 +47,7 @@ const PropertyList = () => {
   return loading ? <Loader /> : (
     <>
       <Navbar />
-      <h1 className="title-list">Lista ta de locuinte</h1>
+      <h1 className="title-list">Lista ta de locuințe</h1>
       <div className="list">
         {propertyList?.map(
           ({

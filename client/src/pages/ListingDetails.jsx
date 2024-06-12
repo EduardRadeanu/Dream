@@ -131,16 +131,16 @@ const ListingDetails = () => {
           />
           <div className="profile-info">
           <h3>
-            Hosted by {listing.creator.firstName} {listing.creator.lastName}
+            Publicat de {listing.creator.firstName} {listing.creator.lastName}
           </h3>
           <br />
-          <h5>Pentru cumparare/inchiriere sunati la numarul :</h5>
+          <h5>Pentru cumpărare/închiriere sunați la numărul :</h5>
           <b>{listing.phone}</b>
         </div>
         </div>
         <hr />
 
-        <h3>Description</h3>
+        <h3>Descriere</h3>
         <p>{listing.description}</p>
         <hr />
 
@@ -150,7 +150,7 @@ const ListingDetails = () => {
 
         <div className="booking">
           <div>
-            <h2>What this place offers?</h2>
+            <h2>Ce oferă locația?</h2>
             <div className="amenities">
               {listing.amenities[0].split(",").map((item, index) => (
                 <div className="facility" key={index}>

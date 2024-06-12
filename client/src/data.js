@@ -40,78 +40,78 @@ export const categories = [
   },
   {
     img: "assets/city.jpg",
-    label: "Oras",
+    label: "Oraș",
     icon: <MdOutlineVilla />,
-    description: "This property is modern!",
+    description: "Locuința la oraș!",
   },
   {
     img: "assets/farm.jpg",
-    label: "Ferma",
+    label: "Fermă",
     icon: <GiWindmill />,
-    description: "This property is has a ferm!",
+    description: "Locuința la fermă!",
   },
   {
     img: "assets/beach.jpg",
     label: "Mare",
     icon: <TbBeach />,
-    description: "This property is close to the beach!",
+    description: "Locuința la mare!",
   },
   {
     img: "assets/mountains.jpg",
     label: "Munte",
     icon: <TbMountain />,
-    description: "This property is in the countryside!",
+    description: "Locuința la munte!",
   },
   
 ];
 
 export const types = [
   {
-    name: "Vanzare",
-    description: "Oaspetii vor cumpara locuinta",
+    name: "Vânzare",
+    description: "Oaspeții vor cumpără locuința",
     icon: <FaHouseUser />,
   },
   {
-    name: "Inchiriere",
+    name: "Închiriere",
     description:
-      "Oaspetii vor inchiria locuinta",
+      "Oaspeții vor închiria locuința",
     icon: <BsFillDoorOpenFill />,
   },
   {
-    name: "Inchiriere(comuna)",
+    name: "Închiriere(comună)",
     description:
-      "Oaspetii vor inchiria locuinta, impreuna cu altcineva",
+      "Oaspeții vor închiria locuința, împreună cu altcineva",
     icon: <FaPeopleRoof />,
   },
 ];
 
 export const facilities = [
   {
-    name: "Cada",
+    name: "Cadă",
     icon: <PiBathtubFill />,
   },
   {
-    name: "Ingrijire personala",
+    name: "Îngrijire personală",
     icon: <FaPumpSoap />,
   },
   {
-    name: "Dus",
+    name: "Duș",
     icon: <FaShower />,
   },
   {
-    name: "Masina de spalat",
+    name: "Mașină de spălat",
     icon: <BiSolidWasher />,
   },
   {
-    name: "Uscator",
+    name: "Uscător",
     icon: <BiSolidDryer />,
   },
   {
-    name: "Umerase",
+    name: "Umerașe",
     icon: <PiCoatHangerFill />,
   },
   {
-    name: "Fier de calcat",
+    name: "Fier de călcat",
     icon: <TbIroning3 />,
   },
   {
@@ -119,7 +119,7 @@ export const facilities = [
     icon: <PiTelevisionFill />,
   },
   {
-    name: "Aer conditionat",
+    name: "Aer condiționat",
     icon: <BsSnow />,
   },
   {
@@ -131,7 +131,7 @@ export const facilities = [
     icon: <FaFireExtinguisher />,
   },
   {
-    name: "Trusa de prim ajutor",
+    name: "Trusă de prim ajutor",
     icon: <BiSolidFirstAid />,
   },
   {
@@ -139,7 +139,7 @@ export const facilities = [
     icon: <BiWifi />,
   },
   {
-    name: "Set de gatit",
+    name: "Set de gătit",
     icon: <FaKitchenSet />,
   },
   {
@@ -155,7 +155,7 @@ export const facilities = [
     icon: <GiToaster />,
   },
   {
-    name: "Gratar",
+    name: "Grătar",
     icon: <GiBarbecue />,
   },
   {
@@ -163,7 +163,7 @@ export const facilities = [
     icon: <MdBalcony />,
   },
   {
-    name: "Gradina",
+    name: "Grădina",
     icon: <MdYard />,
   },
   {

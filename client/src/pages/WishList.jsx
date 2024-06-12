@@ -10,7 +10,7 @@ const WishList = () => {
   return (
     <>
       <Navbar />
-      <h1 className="title-list">Locuinte favorite</h1>
+      <h1 className="title-list">Locuințe favorite</h1>
       <div className="list">
         {wishList?.map(
           ({

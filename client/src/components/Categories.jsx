@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 const Categories = () => {
   return (
     <div className="categories">
-      <h1>Destinatia viselor tale </h1>
+      <h1>Destinația viselor tale </h1>
       <p>
-        Alege urmatoare locuinta in care iti poti petrece cele mai importante momente 
+        Alege următoare locuința în care iți poți petrece cele mai importante momente 
       </p>
 
       <div className="categories_list">
