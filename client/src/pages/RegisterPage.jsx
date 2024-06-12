@@ -22,6 +22,7 @@ const RegisterPage = () => {
   };
 
   const [passwordMatch, setPasswordMatch] = useState(true)
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     setPasswordMatch(formData.password === formData.confirmPassword || formData.confirmPassword === "")
@@ -46,10 +47,13 @@ const RegisterPage = () => {
 
       if (response.ok) {
         navigate("/login")
+      }else{
+        setError("Nu s-a putut efectua înregistrarea.(Acest email este deja folosit)");
       }
     } catch (err) {
-      console.log("Inregistrare esuata", err.message)
+      console.log("Înregistrare eșuată", err.message)
     }
+    
   }
 
   return (
@@ -119,6 +123,10 @@ const RegisterPage = () => {
               alt="profile photo"
               style={{ maxWidth: "80px" }}
             />
+          )}
+
+{error && (
+            <p style={{ color: "red" }}>{error}</p>
           )}
           <button type="submit" disabled={!passwordMatch}>Înregistreza-te</button>
         </form>
