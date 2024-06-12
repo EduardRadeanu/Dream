@@ -21,7 +21,7 @@ app.use("/users", userRoutes)
 const PORT = 3001;
 mongoose
   .connect(process.env.MONGO_URL, {
-    dbName: "Dream_Nest",
+    dbName: "Real_estate",
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
