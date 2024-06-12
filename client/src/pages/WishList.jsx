@@ -22,7 +22,6 @@ const WishList = () => {
             category,
             type,
             price,
-            booking = false,
           }) => (
             <ListingCard
               listingId={_id}
@@ -33,7 +32,6 @@ const WishList = () => {
               category={category}
               type={type}
               price={price}
-              booking={booking}
             />
           )
         )}

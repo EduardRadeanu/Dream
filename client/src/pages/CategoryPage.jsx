@@ -54,7 +54,6 @@ const CategoryPage = () => {
             category,
             type,
             price,
-            booking = false,
           }) => (
             <ListingCard
               listingId={_id}
@@ -66,7 +65,6 @@ const CategoryPage = () => {
               category={category}
               type={type}
               price={price}
-              booking={booking}
             />
           )
         )}

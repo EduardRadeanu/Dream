@@ -17,12 +17,6 @@ const ListingCard = ({
   province,
   country,
   category,
-  type,
-  price,
-  startDate,
-  endDate,
-  totalPrice,
-  booking,
   onDelete,
 }) => {
   /* SLIDER FOR IMAGES */
@@ -110,23 +104,7 @@ const ListingCard = ({
       </h3>
       <p>{category}</p>
 
-      {!booking ? (
-        <>
-          <p>{type}</p>
-          <p>
-            <span>€{price}</span> 
-          </p>
-        </>
-      ) : (
-        <>
-          <p>
-            {startDate} - {endDate}
-          </p>
-          <p>
-            <span>€{totalPrice}</span> total
-          </p>
-        </>
-      )}
+   
 {onDelete && <button onClick={() => onDelete(listingId)} className="delete-button">Șterge</button>}
          
       <button

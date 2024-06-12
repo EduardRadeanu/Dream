@@ -60,7 +60,6 @@ const PropertyList = () => {
             category,
             type,
             price,
-            booking = false,
             
           }) => (
             <ListingCard
@@ -73,7 +72,6 @@ const PropertyList = () => {
               category={category}
               type={type}
               price={price}
-              booking={booking}
               onDelete={handleDelete}
             />
           )

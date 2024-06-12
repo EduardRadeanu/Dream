@@ -48,7 +48,6 @@ const SearchPage = () => {
             category,
             type,
             price,
-            booking = false,
           }) => (
             <ListingCard
               listingId={_id}
@@ -59,7 +58,6 @@ const SearchPage = () => {
               category={category}
               type={type}
               price={price}
-              booking={booking}
             />
           )
         )}
