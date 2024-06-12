@@ -35,7 +35,7 @@ import { AiFillCar } from "react-icons/ai";
 
 export const categories = [
   {
-    label: "All",
+    label: "Toate",
     icon: <BiWorld />,
   },
   {

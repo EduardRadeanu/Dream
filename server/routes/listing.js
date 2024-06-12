@@ -104,7 +104,7 @@ router.get("/search/:search", async (req, res) => {
   try {
     let listings = []
 
-    if (search === "all") {
+    if (search === "Toate") {
       listings = await Listing.find().populate("creator")
     } else {
       listings = await Listing.find({

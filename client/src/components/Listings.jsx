@@ -10,14 +10,14 @@ const Listings = () => {
   const dispatch = useDispatch();
   const [loading, setLoading] = useState(true);
 
-  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [selectedCategory, setSelectedCategory] = useState("Toate");
 
   const listings = useSelector((state) => state.listings);
 
   const getFeedListings = async () => {
     try {
       const response = await fetch(
-        selectedCategory !== "All"
+        selectedCategory !== "Toate"
           ? `http://localhost:3001/properties?category=${selectedCategory}`
           : "http://localhost:3001/properties",
         {
