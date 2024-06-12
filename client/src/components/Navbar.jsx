@@ -28,7 +28,7 @@ const Navbar = () => {
       <div className="navbar_search">
         <input
           type="text"
-          placeholder="Vânzare/Închiriere/Locație"
+          placeholder="Vânzare/Chirie/Locație"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
