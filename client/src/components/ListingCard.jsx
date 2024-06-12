@@ -104,7 +104,7 @@ const ListingCard = ({
         {city}, {province}, {country}
       </h3>
       <p>{category}</p>
-      <span>{price} €</span>
+      <p><span>{price} €</span></p>
 
    
       {onDelete && (
