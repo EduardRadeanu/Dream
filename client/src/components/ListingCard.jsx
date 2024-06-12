@@ -105,8 +105,11 @@ const ListingCard = ({
       <p>{category}</p>
 
    
-{onDelete && <button onClick={() => onDelete(listingId)} className="delete-button">Șterge</button>}
-         
+      {onDelete && (
+  <button onClick={() => onDelete(listingId)} className="delete-button">
+    Șterge
+  </button>
+)}
       <button
         className="favorite"
         onClick={(e) => {

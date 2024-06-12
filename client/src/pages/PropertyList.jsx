@@ -29,9 +29,10 @@ const PropertyList = () => {
   }
 
   const handleDelete = async (listingId) => {
+    console.log(`Deleting property with ID ${listingId}`);
     try {
       await fetch(`http://localhost:3001/properties/${listingId}`, {
-        method: "DELETE"
+        method: "DELETE",
       });
       // Update property list after deletion
       getPropertyList();

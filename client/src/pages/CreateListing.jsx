@@ -291,7 +291,7 @@ const CreateListing = () => {
               </div>
 
               <div className="basic">
-                <p>Beds</p>
+                <p>Pat(locuri de dormit)</p>
                 <div className="basic_count">
                   <RemoveCircleOutline
                     onClick={() => {
