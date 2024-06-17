@@ -368,7 +368,7 @@ const CreateListing = () => {
 
             <h3>Adaugă fotografii</h3>
             <DragDropContext onDragEnd={handleDragPhoto}>
-              <Droppable droppableId="photos" direction="horizontal">
+              <Droppable droppableId="root" direction="horizontal" type="group">
                 {(provided) => (
                   <div
                     className="photos"
