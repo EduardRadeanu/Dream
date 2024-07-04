@@ -108,7 +108,10 @@ const ListingCard = ({
 
    
       {onDelete && (
-  <button onClick={() => onDelete(listingId)} className="delete-button">
+  <button onClick={(e) => {
+    e.stopPropagation();
+    onDelete(listingId);
+  }} className="delete-button">
     Șterge
   </button>
 )}

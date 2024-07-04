@@ -16,7 +16,9 @@ const PropertyList = () => {
 
   const dispatch = useDispatch()
   const navigate = useNavigate();
+  
   const getPropertyList = async () => {
+
     try {
       const response = await fetch(`http://localhost:3001/users/${user._id}/properties`, {
         method: "GET"
@@ -31,6 +33,7 @@ const PropertyList = () => {
   }
 
   const handleDelete = async (listingId) => {
+
     console.log(`Deleting property with ID ${listingId}`);
     try {
       const response = await fetch(`http://localhost:3001/api/properties/${listingId}`, {
@@ -40,11 +43,7 @@ const PropertyList = () => {
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
-   // Actualizează lista de proprietăți după ștergere
-   await getPropertyList();
-
-   // Redirecționare către o altă rută după ștergere
-   navigate(`/${user.creator}/properties`);
+      getPropertyList();
     } catch (err) {
       console.log("Delete property failed", err.message);
     }
