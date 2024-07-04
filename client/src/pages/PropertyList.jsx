@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { setPropertyList } from "../redux/state";
 import Loader from "../components/Loader";
 import Footer from "../components/Footer"
+import { useNavigate } from 'react-router-dom';
 
 const PropertyList = () => {
   const [loading, setLoading] = useState(true)
@@ -14,6 +15,7 @@ const PropertyList = () => {
   console.log(user)
 
   const dispatch = useDispatch()
+  const navigate = useNavigate();
   const getPropertyList = async () => {
     try {
       const response = await fetch(`http://localhost:3001/users/${user._id}/properties`, {
@@ -38,9 +40,11 @@ const PropertyList = () => {
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
-      window.location.reload();
-      // Actualizare lista de proprietăți după ștergere
-      getPropertyList();
+   // Actualizează lista de proprietăți după ștergere
+   await getPropertyList();
+
+   // Redirecționare către o altă rută după ștergere
+   navigate(`/${user.creator}/properties`);
     } catch (err) {
       console.log("Delete property failed", err.message);
     }

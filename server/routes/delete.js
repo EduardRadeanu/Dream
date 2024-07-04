@@ -15,6 +15,8 @@ router.delete('/:listingId', async (req, res) => {
       }
   
       console.log("Listing deleted successfully!");
+
+      
       res.status(200).json({ message: "Listing deleted successfully!" });
     } catch (err) {
       console.error("Failed to delete listing", err);
