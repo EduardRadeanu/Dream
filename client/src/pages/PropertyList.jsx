@@ -31,10 +31,15 @@ const PropertyList = () => {
   const handleDelete = async (listingId) => {
     console.log(`Deleting property with ID ${listingId}`);
     try {
-      await fetch(`http://localhost:3001/properties/${listingId}`, {
+      const response = await fetch(`http://localhost:3001/api/properties/${listingId}`, {
         method: "DELETE",
       });
-      // Update property list after deletion
+  
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      window.location.reload();
+      // Actualizare lista de proprietăți după ștergere
       getPropertyList();
     } catch (err) {
       console.log("Delete property failed", err.message);

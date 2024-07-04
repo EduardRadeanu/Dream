@@ -28,7 +28,6 @@ router.patch("/:userId/:listingId", async (req, res) => {
   }
 })
 
-/* GET PROPERTY LIST */
 router.get("/:userId/properties", async (req, res) => {
   try {
     const { userId } = req.params
