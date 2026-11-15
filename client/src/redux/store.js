@@ -11,6 +11,7 @@ import {
 } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import state from "./state";
+import { PREVIEW } from "../api";
 
 const persistConfig = {
   key: "root",
@@ -18,7 +19,11 @@ const persistConfig = {
   storage,
 };
 
-const persistedReducer = persistReducer(persistConfig, state);
+// The preview stores nothing in the visitor's browser (no localStorage); the full app keeps the login across reloads.
+const persistedReducer = PREVIEW ? state : persistReducer(persistConfig, state);
+if (PREVIEW) {
+  try { window.localStorage.removeItem("persist:root"); } catch {}
+}
 
 export const store = configureStore({
   reducer: persistedReducer,
@@ -30,6 +35,6 @@ export const store = configureStore({
     }),
 });
 
-export let persistor = persistStore(store);
+export let persistor = PREVIEW ? null : persistStore(store);
 
 

@@ -16,8 +16,12 @@ const Footer = () => {
         </div>
         <div className="footer_right_info">
           <Email />
-          <p>eduard@support.com</p>
+          <p><a href="mailto:ediradeanu12345@gmail.com">ediradeanu12345@gmail.com</a></p>
         </div>
+        <div className="footer_right_info footer_legal">
+          <a href="/confidentialitate">Confidențialitate</a>{" · "}<a href="/cookies">Cookies</a>{" · "}<a href="/en/privacy">Privacy (EN)</a>
+        </div>
+        <p className="footer_note">Anunțuri demonstrative · proiect de licență</p>
       </div>
     </div>
   )

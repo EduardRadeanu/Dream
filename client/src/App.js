@@ -11,6 +11,7 @@ import WishList from "./pages/WishList";
 import PropertyList from "./pages/PropertyList";
 import CategoryPage from "./pages/CategoryPage";
 import SearchPage from "./pages/SearchPage";
+import { Privacy, Cookies, PrivacyEn, CookiesEn } from "./pages/Legal";
 
 function App() {
   return (
@@ -26,6 +27,10 @@ function App() {
           <Route path="/properties/search/:search" element={<SearchPage />} />
           {!PREVIEW && <Route path="/:userId/wishList" element={<WishList />} />}
           {!PREVIEW && <Route path="/:userId/properties" element={<PropertyList />} />}
+          <Route path="/confidentialitate" element={<Privacy />} />
+          <Route path="/cookies" element={<Cookies />} />
+          <Route path="/en/privacy" element={<PrivacyEn />} />
+          <Route path="/en/cookies" element={<CookiesEn />} />
           {/* preview: account pages and unknown addresses go back to the home page */}
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
