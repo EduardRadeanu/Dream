@@ -2,6 +2,8 @@
 @import "./breakpoints.scss";
 
 .footer {
+  &_legal a, &_right_info a { color: inherit; }
+  &_note { font-size: 12px; opacity: 0.6; margin-top: 4px; }
   display: flex;
   justify-content: space-between;
   align-items: center; 
