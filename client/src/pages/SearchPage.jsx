@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import "../styles/List.scss"
 import { useSelector,useDispatch  } from "react-redux";
 import { setListings } from "../redux/state";
+import { searchListings } from "../api";
 import { useEffect, useState } from "react";
 import Loader from "../components/Loader"
 import Navbar from "../components/Navbar";
@@ -17,11 +18,7 @@ const SearchPage = () => {
 
   const getSearchListings = async () => {
     try {
-      const response = await fetch(`http://localhost:3001/properties/search/${search}`, {
-        method: "GET"
-      })
-
-      const data = await response.json()
+      const data = await searchListings(search)
       dispatch(setListings({ listings: data }))
       setLoading(false)
     } catch (err) {

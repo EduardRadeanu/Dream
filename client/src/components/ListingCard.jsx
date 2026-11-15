@@ -7,6 +7,7 @@ import {
 } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
+import { assetUrl, PREVIEW } from "../api";
 import { setWishList } from "../redux/state";
 
 const ListingCard = ({
@@ -74,7 +75,7 @@ const ListingCard = ({
           {listingPhotoPaths?.map((photo, index) => (
             <div key={index} className="slide">
               <img
-                src={`http://localhost:3001/${photo?.replace("public", "")}`}
+                src={assetUrl(photo)}
                 alt={`photo ${index + 1}`}
               />
               <div
@@ -115,7 +116,7 @@ const ListingCard = ({
     Șterge
   </button>
 )}
-      <button
+      {!PREVIEW && <button
         className="favorite"
         onClick={(e) => {
           e.stopPropagation();
@@ -128,7 +129,7 @@ const ListingCard = ({
         ) : (
           <Favorite sx={{ color: "white" }} />
         )}
-      </button>
+      </button>}
       
     </div>
   );

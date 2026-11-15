@@ -1,0 +1,4 @@
+# secrets stay local, never in git
+.env
+**/.env
+node_modules/
