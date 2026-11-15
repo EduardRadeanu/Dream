@@ -5,6 +5,7 @@ import ListingCard from "./ListingCard";
 import Loader from "./Loader";
 import { useDispatch, useSelector } from "react-redux";
 import { setListings } from "../redux/state";
+import { getListings } from "../api";
 
 const Listings = () => {
   const dispatch = useDispatch();
@@ -16,16 +17,7 @@ const Listings = () => {
 
   const getFeedListings = async () => {
     try {
-      const response = await fetch(
-        selectedCategory !== "Toate"
-          ? `http://localhost:3001/properties?category=${selectedCategory}`
-          : "http://localhost:3001/properties",
-        {
-          method: "GET",
-        }
-      );
-
-      const data = await response.json();
+      const data = await getListings(selectedCategory);
       dispatch(setListings({ listings: data }));
       setLoading(false);
     } catch (err) {

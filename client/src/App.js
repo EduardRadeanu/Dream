@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { PREVIEW } from "./api";
 import "./App.css";
 import HomePage from "./pages/HomePage";
 import RegisterPage from "./pages/RegisterPage";
@@ -17,14 +18,16 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/register" element={<RegisterPage />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/create-listing" element={<CreateListing />} />
+          {!PREVIEW && <Route path="/register" element={<RegisterPage />} />}
+          {!PREVIEW && <Route path="/login" element={<LoginPage />} />}
+          {!PREVIEW && <Route path="/create-listing" element={<CreateListing />} />}
           <Route path="/properties/:listingId" element={<ListingDetails />} />
           <Route path="/properties/category/:category" element={<CategoryPage />} />
           <Route path="/properties/search/:search" element={<SearchPage />} />
-          <Route path="/:userId/wishList" element={<WishList />} />
-          <Route path="/:userId/properties" element={<PropertyList />} />
+          {!PREVIEW && <Route path="/:userId/wishList" element={<WishList />} />}
+          {!PREVIEW && <Route path="/:userId/properties" element={<PropertyList />} />}
+          {/* preview: account pages and unknown addresses go back to the home page */}
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </BrowserRouter>
     </div>

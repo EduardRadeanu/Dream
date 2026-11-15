@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { setListings } from "../redux/state";
+import { getListings } from "../api";
 import Loader from "../components/Loader";
 import ListingCard from "../components/ListingCard";
 import Footer from "../components/Footer"
@@ -17,14 +18,7 @@ const CategoryPage = () => {
 
   const getFeedListings = async () => {
     try {
-      const response = await fetch(
-          `http://localhost:3001/properties?category=${category}`,
-        {
-          method: "GET",
-        }
-      );
-
-      const data = await response.json();
+      const data = await getListings(category);
       dispatch(setListings({ listings: data }));
       setLoading(false);
     } catch (err) {

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "../styles/ListingDetails.scss";
 import { useParams } from "react-router-dom";
 import { facilities } from "../data";
+import { getListing, assetUrl } from "../api";
 
 import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
@@ -19,14 +20,7 @@ const ListingDetails = () => {
 
   const getListingDetails = async () => {
     try {
-      const response = await fetch(
-        `http://localhost:3001/properties/${listingId}`,
-        {
-          method: "GET",
-        }
-      );
-
-      const data = await response.json();
+      const data = await getListing(listingId);
       setListing(data);
       setLoading(false);
     } catch (err) {
@@ -42,6 +36,16 @@ const ListingDetails = () => {
 
 
 
+
+  if (!loading && !listing) {
+    return (
+      <>
+        <Navbar />
+        <h1 className="title-list">Anunțul nu există.</h1>
+        <Footer />
+      </>
+    );
+  }
 
   return loading ? (
     <Loader />
@@ -61,7 +65,7 @@ const ListingDetails = () => {
         <div className="photos">
           {listing.listingPhotoPaths?.map((item) => (
             <img
-              src={`http://localhost:3001/${item.replace("public", "")}`}
+              src={assetUrl(item)}
               alt="listing photo"
             />
           ))}
@@ -79,10 +83,7 @@ const ListingDetails = () => {
 
         <div className="profile">
           <img
-            src={`http://localhost:3001/${listing.creator.profileImagePath.replace(
-              "public",
-              ""
-            )}`}
+            src={assetUrl(listing.creator.profileImagePath)}
           />
           <div className="profile-info">
           <h3>

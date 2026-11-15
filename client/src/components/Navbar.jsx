@@ -5,6 +5,7 @@ import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import "../styles/Navbar.scss";
 import { Link, useNavigate } from "react-router-dom";
+import { PREVIEW, assetUrl } from "../api";
 import { setLogout } from "../redux/state.js";
 
 
@@ -41,7 +42,11 @@ const Navbar = () => {
       </div>
 
       <div className="navbar_right">
-        {user ? (
+        {PREVIEW ? (
+          <span className="host" title="Conturile și publicarea sunt dezactivate în previzualizare">
+            Previzualizare
+          </span>
+        ) : user ? (
           <a href="/create-listing" className="host">
             Publică o locuință
           </a>
@@ -60,17 +65,20 @@ const Navbar = () => {
             <Person sx={{ color: variables.darkgrey }} />
           ) : (
             <img
-              src={`http://localhost:3001/${user.profileImagePath.replace(
-                "public",
-                ""
-              )}`}
+              src={assetUrl(user.profileImagePath)}
               alt="profile photo"
               style={{ objectFit: "cover", borderRadius: "50%" }}
             />
           )}
         </button>
 
-        {dropdownMenu && !user && (
+        {dropdownMenu && !user && PREVIEW && (
+          <div className="navbar_right_accountmenu">
+            <span>Conturile sunt dezactivate în această previzualizare.</span>
+          </div>
+        )}
+
+        {dropdownMenu && !user && !PREVIEW && (
           <div className="navbar_right_accountmenu">
             <Link to="/login">Conectează-te</Link>
             <Link to="/register">Înregistreză-te</Link>
